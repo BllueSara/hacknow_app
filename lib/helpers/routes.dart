@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hacknow_app/pages/admin/CreateHackathonPage.dart';
+import 'package:hacknow_app/pages/admin/HackathonEventsPage.dart';
+import 'package:hacknow_app/pages/admin/participants.dart';
 import 'package:hacknow_app/pages/shared/auth/login_screen.dart';
 import 'package:hacknow_app/pages/shared/auth/sign_up_screen.dart';
 import 'package:hacknow_app/pages/shared/welcome_screen.dart';
@@ -39,7 +42,7 @@ class AppRouters {
         return MaterialPageRoute(builder: (_) => const NavBar());
 
       case Routes.welcomeScreen:
-        return MaterialPageRoute(builder: (_) => const WhoAreYouPage());
+        return MaterialPageRoute(builder: (_) => const HackathonEventsPage());
 
       default:
         return null;
