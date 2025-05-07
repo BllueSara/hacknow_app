@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hacknow_app/helpers/colors.dart';
 import 'package:hacknow_app/pages/users/support_hackthon.dart';
 
@@ -80,20 +79,20 @@ class HakthonDetails extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
+              const  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      const InfoItem(
+                       InfoItem(
                           icon: Icons.group,
                           label: 'موجودون',
                           subLabel: 'من الصناعة'),
                       Row(
                         children: [
-                          Transform.translate(
-                            offset: const Offset(-64, 6),
-                            child: SvgPicture.asset(
-                                'assets/images/Saudi_Riyal_black.svg'),
-                          ),
+                          // Transform.translate(
+                          //   offset: const Offset(-64, 6),
+                          //   child: SvgPicture.asset(
+                          //       'assets/images/Saudi_Riyal_black.svg'),
+                          // ),
                           const InfoItem(
                               icon: Icons.emoji_events,
                               label: '100000 ',

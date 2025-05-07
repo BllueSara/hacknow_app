@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-<<<<<<< HEAD
 
-=======
->>>>>>> c4eac7f2d08d29620d93d45ea13becd9fc4f95e9
 class ParticipantsPage extends StatelessWidget {
   const ParticipantsPage({super.key});
 
@@ -29,25 +26,12 @@ class ParticipantsPage extends StatelessWidget {
           title: const Text(
             'المشاركون',
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-<<<<<<< HEAD
             
           ),
           leading: const Icon(Icons.arrow_back_ios),
         ),
         body: Column(
           
-=======
-          ),
-          leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back_ios),
-            color: Colors.black,
-          ),
-        ),
-        body: Column(
->>>>>>> c4eac7f2d08d29620d93d45ea13becd9fc4f95e9
           children: [
             const Padding(
               padding: EdgeInsets.all(20.0),

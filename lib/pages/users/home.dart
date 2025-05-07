@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hacknow_app/helpers/colors.dart';
 import 'package:hacknow_app/pages/shared/who_you_are.dart';
 import 'package:hacknow_app/pages/users/hakthon_details.dart';
@@ -179,7 +178,6 @@ class _HomeState extends State<Home> {
                         const Icon(Icons.emoji_events_outlined,
                             size: 16, color: Color(0xff4B5563)),
                         const SizedBox(width: 4),
-                        SvgPicture.asset('assets/images/Saudi_Riyal_black.svg'),
                         const SizedBox(width: 4),
                         Text(
                           event['prize']!,
