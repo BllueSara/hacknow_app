@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hacknow_app/helpers/colors.dart';
 import 'package:hacknow_app/pages/shared/auth/sign_up_screen.dart';
+import 'package:hacknow_app/pages/shared/auth/sign_up_screen_admin.dart';
+import 'package:hacknow_app/pages/shared/auth/sign_up_screen_universty.dart';
 
 class WhoAreYouPage extends StatelessWidget {
   const WhoAreYouPage({super.key});
@@ -10,17 +12,13 @@ class WhoAreYouPage extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          toolbarHeight: 50,
-          leadingWidth: 0,
-        ),
+        backgroundColor: Colors.white,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(height: 50),
               const Text(
                 'من أنت؟',
                 style: TextStyle(
@@ -45,17 +43,19 @@ class WhoAreYouPage extends StatelessWidget {
                 subtitle: 'إدارة موارد الجامعة',
                 onTap: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const SignUpScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => const SignUpScreenUniversty()),
                 ),
               ),
               const SizedBox(height: 12),
               _buildOption(
-                icon: Icons.emoji_events,
+                icon: Icons.emoji_events_outlined,
                 title: 'منظم هاكاثون',
                 subtitle: 'إنشاء وإدارة الفعاليات',
                 onTap: () => Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const SignUpScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => const SignUpScreenAdmin()),
                 ),
               ),
             ],
@@ -71,13 +71,16 @@ class WhoAreYouPage extends StatelessWidget {
     required String subtitle,
     required VoidCallback onTap,
   }) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      color: ColorsManger.bgColor,
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: const Color(0xffF3F4F6)),
+      ),
       child: ListTile(
         leading: CircleAvatar(
           backgroundColor: Colors.blue.shade50,
-          child: Icon(icon, color: Colors.blue),
+          child: Icon(icon, color: ColorsManger.primaryColor),
         ),
         title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
         subtitle: Text(subtitle),

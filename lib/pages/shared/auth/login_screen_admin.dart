@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hacknow_app/helpers/styles.dart';
-import 'package:hacknow_app/pages/shared/auth/sign_up_screen.dart';
-import 'package:hacknow_app/pages/users/nav_bar.dart';
+import 'package:hacknow_app/pages/admin/hackthonevents.dart';
+import 'package:hacknow_app/pages/shared/auth/sign_up_screen_admin.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class LoginScreenAdmin extends StatefulWidget {
+  const LoginScreenAdmin({super.key});
 
   @override
-  LoginScreenState createState() => LoginScreenState();
+  LoginScreenAdminState createState() => LoginScreenAdminState();
 }
 
-class LoginScreenState extends State<LoginScreen> {
+class LoginScreenAdminState extends State<LoginScreenAdmin> {
   bool agreeToTerms = false;
   bool showPassword = false;
   bool showConfirmPassword = false;
@@ -50,7 +50,7 @@ class LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const NavBar()));
+                            builder: (context) => const HackathonEventsPage()));
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF6C63FF),
@@ -71,7 +71,7 @@ class LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const SignUpScreen()));
+                            builder: (context) => const SignUpScreenAdmin()));
                   },
                   child: RichText(
                     text: const TextSpan(

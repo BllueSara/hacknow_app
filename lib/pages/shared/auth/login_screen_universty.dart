@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hacknow_app/helpers/styles.dart';
-import 'package:hacknow_app/pages/shared/auth/sign_up_screen.dart';
-import 'package:hacknow_app/pages/users/nav_bar.dart';
+import 'package:hacknow_app/pages/shared/auth/sign_up_screen_universty.dart';
+import 'package:hacknow_app/pages/universty/student_request.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class LoginScreenUniversty extends StatefulWidget {
+  const LoginScreenUniversty({super.key});
 
   @override
-  LoginScreenState createState() => LoginScreenState();
+  LoginScreenUniverstyState createState() => LoginScreenUniverstyState();
 }
 
-class LoginScreenState extends State<LoginScreen> {
+class LoginScreenUniverstyState extends State<LoginScreenUniversty> {
   bool agreeToTerms = false;
   bool showPassword = false;
   bool showConfirmPassword = false;
@@ -47,10 +47,7 @@ class LoginScreenState extends State<LoginScreen> {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const NavBar()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>  StudentRequestsPage()));
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF6C63FF),
@@ -68,11 +65,8 @@ class LoginScreenState extends State<LoginScreen> {
               Center(
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SignUpScreen()));
-                  },
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpScreenUniversty()));
+                                    },
                   child: RichText(
                     text: const TextSpan(
                       text: 'لا يوجد لديك حساب؟ ',
